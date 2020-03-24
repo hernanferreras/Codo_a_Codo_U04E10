@@ -1,21 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package u04e10;
 
-/**
- *
- * @author hernan
- */
+import java.util.Scanner;
 public class U04E10 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int num1;
+        int num2;
+        Scanner entrada = new Scanner(System.in);
+        do{
+            System.out.print("Ingrese el primer numero: ");
+            num1 = entrada.nextInt();
+            System.out.print("Ingrese el segundo numero: ");
+            num2 = entrada.nextInt();
+        }   while (((num1<0)||(num2<0))||((num1>100)||(num2>100)));
+            if (num1==0||num2==0){
+                    System.out.print("La division es igual a 0 o no se puede realizar");
+            }
+            else{   
+                if((num1>num2)&&(num1%num2==0)){
+                    System.out.print("El "+num1+" es divisible por el "+num2);
+                }
+                else{
+                    if((num2>num1)&&(num2%num1==0)){
+                            System.out.print("El "+num2+" es divisible por el "+num1);
+                    }
+                            else{
+                                System.out.print("Los numeros no son divisibles");
+                            }
+                }
+                
+            }
     }
-    
 }
